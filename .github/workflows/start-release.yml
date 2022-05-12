@@ -89,5 +89,5 @@ jobs:
               # open new pull request with the body of from the local template.
               # Use a bash parameter expansion with replacement on BODY since it contains newlines.
               DATA="{\"title\":\"${TITLE}\", \"body\":\"${BODY//$'\n'/'\n'}\", \"base\":\"${TARGET}\", \"head\":\"${SOURCE}\"}";
-              curl -sSL -H "${AUTH_HEADER}" -H "${HEADER}" -X POST --data "${DATA}" $URL;
+              PR_COMMIT=$(curl -sSL -H "${AUTH_HEADER}" -H "${HEADER}" -X POST --data "${DATA}" $URL | jq '.merge_commit_sha');
           fi
