@@ -7,14 +7,11 @@
       "short_msg": "Invalid rule schema",
       "spans": [
         {
-          "config_end": null,
-          "config_path": null,
-          "config_start": null,
           "end": {
             "col": 1,
             "line": 13
           },
-          "file": "rules/syntax/bad14.yaml",
+          "file": "no file",
           "source_hash": "3288d50ef917f40d8e5d0bec082d910a53ea93465167f5b2efbaac7ed68efcb2",
           "start": {
             "col": 5,
